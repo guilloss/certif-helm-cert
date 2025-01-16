@@ -8,7 +8,7 @@ environnement: ovh
 phase: dev
 
 image:
-  repository: harbor.apps.c6.numerique-interieur.com/mi-service-team
+  repository:  harbor.apps.dso.numerique-interieur.com/mi-crtogu/java-demo:master  # OGU modification du repo
   name: java-demo
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
@@ -27,14 +27,14 @@ ingress:
   enabled: true
   secret:
     enabled: true
-  host: plec-demo.dev.numerique-interieur.com
+  host: certification-concombre-masque-lab2.apps.dso-formation.hp.numerique-interieur.com
 
 resources:
   limits:
-    memory: "512Mi"
-    cpu: "1"
+    memory: "256Mi" # OGU division par 2
+    cpu: "500Mi"    # OGU division par 2
   requests:
-    memory: "512Mi"
+    memory: "256Mi" # OGU division par 2
     cpu: "500Mi"
 
 global:
