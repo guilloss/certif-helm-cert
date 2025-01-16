@@ -66,11 +66,11 @@ postgresql:
   primary:
     resources:
       limits:
-        memory: "512Mi"
-        cpu: "1"
-      requests:
-        memory: "512Mi"
-        cpu: "1"
+        memory: "256Mi" # OGU changement /2
+        cpu: "500Mi"    # OGU changement /2
+      requests: 
+        memory: "256Mi" # OGU changement /2
+        cpu: "500Mi"    # OGU changement /2
     volumePermissions:
       enabled: false
       securityContext:
